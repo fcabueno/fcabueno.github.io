@@ -106,7 +106,7 @@
     border: var(--px) solid var(--ink);
     border-radius: 14px;
     box-shadow: 0 calc(2 * var(--px)) 0 0 var(--ink);
-    transition: transform .08s ease, box-shadow .08s ease;
+    transition: transform .28s cubic-bezier(.22, 1, .36, 1), box-shadow .28s cubic-bezier(.22, 1, .36, 1);
   }
   /* ícone fixo na borda esquerda, texto continua centralizado */
   .btn svg {
@@ -122,6 +122,7 @@
     box-shadow: 0 calc(3 * var(--px)) 0 0 var(--ink);
   }
   .btn:active {
+    transition-duration: .08s;
     transform: translateY(var(--px));
     box-shadow: 0 0 0 0 var(--ink);
   }

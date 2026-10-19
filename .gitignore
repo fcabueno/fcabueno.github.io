@@ -1,10 +1,8 @@
 .DS_Store
+
+# Materiais locais (PDF do e-book, banners)
 *.pdf
 *.png
-# Ícone usado pela landing do e-book
-!**/apple-touch-icon.png
 
-# Prévia gerada e backups locais da landing
-landing/previa/
-landing/site/
-landing/config.antes-*.json
+# Ícone usado pela landing do e-book
+!landing/img/apple-touch-icon.png

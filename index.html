@@ -117,6 +117,11 @@
     width: 1.25rem;
     height: 1.25rem;
   }
+  /* variante com o dobro da altura do botão padrão */
+  .btn--duplo {
+    min-height: calc(2 * (2.3rem + 1.5em + 2 * var(--px)));
+    text-align: center;
+  }
   .btn:hover {
     transform: translateY(calc(-1 * var(--px)));
     box-shadow: 0 calc(3 * var(--px)) 0 0 var(--ink);
@@ -157,11 +162,11 @@
       </svg>
       <span>Instagram</span>
     </a></li>
-    <li><a class="btn" href="landing/">
+    <li><a class="btn btn--duplo" href="landing/">
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <circle cx="12" cy="12" r="5" fill="#22c55e"/>
       </svg>
-      <span>E-book SQL para Analistas</span>
+      <span>E-book<br>SQL para Analistas</span>
     </a></li>
   </ul>
 </main>

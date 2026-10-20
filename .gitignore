@@ -1,8 +1,9 @@
 .DS_Store
 
-# Materiais locais (PDF do e-book, banners)
+# Materiais locais (PDF do e-book, banners, export do design)
 *.pdf
 *.png
+*.zip
 
 # Ícone usado pela landing do e-book
 !landing/img/apple-touch-icon.png

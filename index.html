@@ -15,9 +15,8 @@
 <meta name="description" content="Dados, tecnologia e conhecimento. Explore os links e o e-book de Felipe Bueno.">
 <meta property="og:title" content="Felipe Bueno — Hub de Dados">
 <meta property="og:description" content="Dados, tecnologia e conhecimento.">
-<meta property="og:image" content="img_avatar.jpg">
-<link rel="icon" href="favicon-verde.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="64x64" href="favicon-verde.png">
+<meta property="og:image" content="s-avatar.jpg">
+<link rel="icon" href="s-favicon.ico" sizes="any">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,15 +25,7 @@
   *, *::before, *::after { box-sizing: border-box; }
   html { min-height: 100%; }
   body { margin: 0; min-height: 100vh; background: #111; color: var(--ink); font-family: 'Roboto', sans-serif; -webkit-font-smoothing: antialiased; }
-  body::before, body::after { content: ''; position: fixed; inset: 0; pointer-events: none; }
-  body::before {
-    background: radial-gradient(ellipse at 53% 40%, transparent 5%, rgba(0,0,0,.24) 70%),
-      linear-gradient(113deg, transparent 4%, rgba(0,0,0,.78) 15%, transparent 25%, transparent 63%, rgba(0,0,0,.65) 75%, transparent 89%),
-      repeating-linear-gradient(93deg, rgba(255,255,255,.045) 0 1px, transparent 1px 3px),
-      repeating-linear-gradient(4deg, rgba(255,255,255,.028) 0 1px, transparent 1px 3px), #252525;
-    z-index: -2;
-  }
-  body::after { z-index: -1; opacity: .32; background-image: repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0, rgba(255,255,255,.08) .5px, transparent .5px, transparent 2px), repeating-linear-gradient(0deg, rgba(0,0,0,.14) 0, rgba(0,0,0,.14) .5px, transparent .5px, transparent 2px); }
+  body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: -1; background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('s-background.jpg') center 42% / cover no-repeat; }
   .page { width: min(100% - 40px, 480px); min-height: 100svh; margin: auto; display: flex; flex-direction: column; }
   .footer { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #c0bfba; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
   .location { display: inline-flex; align-items: center; gap: 7px; }
@@ -59,7 +50,7 @@
 <body>
 <div class="page">
   <main>
-    <img class="avatar" src="img_avatar.jpg" alt="Foto de Felipe Bueno" width="400" height="400">
+    <img class="avatar" src="s-avatar.jpg" alt="Foto de Felipe Bueno" width="400" height="400">
     <h1>Felipe Bueno</h1>
     <p class="bio">FB ↔ DT</p>
     <ul class="links" aria-label="Links de Felipe Bueno">

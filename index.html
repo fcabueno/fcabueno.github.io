@@ -9,175 +9,65 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'AW-16622909356');
 </script>
-<title>Felipe Bueno</title>
-<meta name="description" content="Links do Felipe Bueno: LinkedIn, Instagram e o e-book SQL para Analistas.">
-<meta property="og:title" content="Felipe Bueno">
-<meta property="og:description" content="Engenheiro de dados">
+<title>Felipe Bueno — Hub de Dados</title>
+<meta name="description" content="Dados, tecnologia e conhecimento. Explore os links e o e-book de Felipe Bueno.">
+<meta property="og:title" content="Felipe Bueno — Hub de Dados">
+<meta property="og:description" content="Dados, tecnologia e conhecimento.">
 <meta property="og:image" content="img_avatar.jpg">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='black'/></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='black'/><text x='50' y='68' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='55' fill='white'>F</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --paper: #f5f5f5;
-    --ink: #1c1b2b;
-    --muted: #4a4858;
-    --px: 3px;
-    box-sizing: border-box;
-    padding-top: env(safe-area-inset-top, 0px);
-    padding-bottom: env(safe-area-inset-bottom, 0px);
+  :root { color-scheme: dark; --ink: #f0efea; }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { min-height: 100%; }
+  body { margin: 0; min-height: 100vh; background: #111; color: var(--ink); font-family: 'Roboto', sans-serif; -webkit-font-smoothing: antialiased; }
+  body::before, body::after { content: ''; position: fixed; inset: 0; pointer-events: none; }
+  body::before {
+    background: radial-gradient(ellipse at 53% 40%, transparent 5%, rgba(0,0,0,.24) 70%),
+      linear-gradient(113deg, transparent 4%, rgba(0,0,0,.78) 15%, transparent 25%, transparent 63%, rgba(0,0,0,.65) 75%, transparent 89%),
+      repeating-linear-gradient(93deg, rgba(255,255,255,.045) 0 1px, transparent 1px 3px),
+      repeating-linear-gradient(4deg, rgba(255,255,255,.028) 0 1px, transparent 1px 3px), #252525;
+    z-index: -2;
   }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --paper: #2b2b2b;
-      --ink: #ecebe3;
-      --muted: #b4b2ab;
-    }
-  }
-  :root[data-theme="dark"] {
-    --paper: #2b2b2b;
-    --ink: #ecebe3;
-    --muted: #b4b2ab;
-  }
-
-  *, *::before, *::after { box-sizing: inherit; margin: 0; padding: 0; }
-
-  html, body { min-height: 100%; }
-
-  body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  main {
-    max-width: 30rem;
-    margin: 0 auto;
-    padding: 3rem 1.25rem;
-    min-height: 100vh;
-    min-height: calc(100svh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .avatar {
-    width: 7.5rem;
-    height: 7.5rem;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin-bottom: 1.25rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: -.01em;
-    margin-bottom: .5rem;
-  }
-
-  .bio {
-    font-size: .95rem;
-    color: var(--muted);
-    line-height: 1.5;
-    margin-bottom: 2.25rem;
-  }
-
-  .links {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-  }
-
-  /* botão com borda arredondada e sombra sólida deslocada embaixo */
-  .btn {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 1.15rem 3rem;
-    color: var(--ink);
-    background: var(--paper);
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    border: var(--px) solid var(--ink);
-    border-radius: 14px;
-    box-shadow: 0 calc(2 * var(--px)) 0 0 var(--ink);
-    transition: transform .28s cubic-bezier(.22, 1, .36, 1), box-shadow .28s cubic-bezier(.22, 1, .36, 1);
-  }
-  /* ícone fixo na borda esquerda, texto continua centralizado */
-  .btn svg {
-    position: absolute;
-    left: 1.25rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1.25rem;
-    height: 1.25rem;
-  }
-  /* variante com o dobro da altura do botão padrão */
-  .btn--duplo {
-    min-height: calc(2 * (2.3rem + 1.5em + 2 * var(--px)));
-    text-align: center;
-  }
-  .btn:hover {
-    transform: translateY(calc(-1 * var(--px)));
-    box-shadow: 0 calc(3 * var(--px)) 0 0 var(--ink);
-  }
-  .btn:active {
-    transition-duration: .08s;
-    transform: translateY(var(--px));
-    box-shadow: 0 0 0 0 var(--ink);
-  }
-
-  a:focus-visible {
-    outline: 2px dashed var(--ink);
-    outline-offset: 6px;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .btn { transition: none; }
-  }
+  body::after { z-index: -1; opacity: .32; background-image: repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0, rgba(255,255,255,.08) .5px, transparent .5px, transparent 2px), repeating-linear-gradient(0deg, rgba(0,0,0,.14) 0, rgba(0,0,0,.14) .5px, transparent .5px, transparent 2px); }
+  .page { width: min(100% - 40px, 480px); min-height: 100svh; margin: auto; display: flex; flex-direction: column; }
+  .footer { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #c0bfba; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+  .location { display: inline-flex; align-items: center; gap: 7px; }
+  .flag { width: 16px; height: 11px; display: block; }
+  main { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 64px 0 56px; text-align: center; }
+  .avatar { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 1px solid #fff; margin-bottom: 18px; }
+  h1 { margin: 0; font-family: 'Roboto', sans-serif; font-size: clamp(1.65rem, 6vw, 2rem); line-height: 1.1; letter-spacing: -.035em; }
+  .bio { margin: 10px 0 30px; color: #c8c7c1; font-size: 13px; letter-spacing: .04em; }
+  .links { list-style: none; width: 85%; padding: 0; margin: 0; display: grid; gap: 24px; }
+  .link { position: relative; min-height: 65px; padding: 18px 38px; display: flex; align-items: center; justify-content: center; background: rgba(17,17,17,.75); border: 3px solid #fff; border-radius: 8px; box-shadow: 0 6px 0 rgba(255,255,255,.28); color: var(--ink); text-decoration: none; font-family: 'Roboto', sans-serif; font-size: 15px; font-weight: 600; transition: background .2s, color .2s, transform .2s, box-shadow .2s; }
+  .link-number { position: absolute; top: 50%; transform: translateY(-50%); }
+  .link-number { left: 16px; font: 700 10px 'Roboto', sans-serif; letter-spacing: .12em; opacity: .65; }
+  .link:hover, .link:focus-visible { background: #efeee8; color: #151515; }
+  .link:hover { transform: translateY(-2px); box-shadow: 0 8px 0 rgba(255,255,255,.28); }
+  .link:active { transform: translateY(3px); box-shadow: 0 2px 0 rgba(255,255,255,.28); }
+  .link:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+  .footer { padding: 16px 0 24px; border-top: 1px solid #fff; }
+  @media (max-width: 400px) { .page { width: calc(100% - 32px); } main { padding: 42px 0; } }
+  @media (prefers-reduced-motion: reduce) { .link { transition: none; } }
 </style>
 </head>
 <body>
-<main>
-  <img class="avatar" src="img_avatar.jpg" alt="Foto de Felipe Bueno" width="400" height="400">
-  <h1>Felipe Bueno</h1>
-  <p class="bio">Data Tech → SP</p>
-
-
-  <ul class="links">
-    <li><a class="btn" href="https://www.linkedin.com/in/fcabueno/" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="5" fill="#22c55e"/>
-      </svg>
-      <span>LinkedIn</span>
-    </a></li>
-    <li><a class="btn" href="https://www.instagram.com/fcabueno/" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="5" fill="#22c55e"/>
-      </svg>
-      <span>Instagram</span>
-    </a></li>
-    <li><a class="btn btn--duplo" href="landing/">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="5" fill="#22c55e"/>
-      </svg>
-      <span>E-book<br>SQL para Analistas</span>
-    </a></li>
-  </ul>
-</main>
+<div class="page">
+  <main>
+    <img class="avatar" src="img_avatar.jpg" alt="Foto de Felipe Bueno" width="400" height="400">
+    <h1>Felipe Bueno</h1>
+    <p class="bio">Data Tech → SP</p>
+    <ul class="links" aria-label="Links de Felipe Bueno">
+      <li><a class="link" href="https://www.linkedin.com/in/fcabueno/" target="_blank" rel="noopener noreferrer"><span class="link-number" aria-hidden="true">01</span><span>LinkedIn</span></a></li>
+      <li><a class="link" href="https://www.instagram.com/fcabueno/" target="_blank" rel="noopener noreferrer"><span class="link-number" aria-hidden="true">02</span><span>Instagram</span></a></li>
+      <li><a class="link" href="landing/"><span class="link-number" aria-hidden="true">03</span><span>E-Book — SQL</span></a></li>
+    </ul>
+  </main>
+  <footer class="footer"><span>DATA TECH @ 2026</span><span class="location">São Paulo, BR <svg class="flag" viewBox="0 0 20 14" role="img" aria-label="Brasil"><rect x=".5" y=".5" width="19" height="13" rx="1" fill="#229447"/><path d="M10 2.5 16.5 7 10 11.5 3.5 7Z" fill="#f4d342"/><circle cx="10" cy="7" r="2" fill="#28539a"/></svg></span></footer>
+</div>
 </body>
 </html>

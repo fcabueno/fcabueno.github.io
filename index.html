@@ -56,10 +56,34 @@
     <ul class="links" aria-label="Links de Felipe Bueno">
       <li><a class="link" href="https://www.linkedin.com/in/fcabueno/" target="_blank" rel="noopener noreferrer"><span class="link-number" aria-hidden="true">01</span><span>LinkedIn</span></a></li>
       <li><a class="link" href="https://www.instagram.com/fcabueno/" target="_blank" rel="noopener noreferrer"><span class="link-number" aria-hidden="true">02</span><span>Instagram</span></a></li>
-      <li><a class="link" href="landing/"><span class="link-number" aria-hidden="true">03</span><span>E·Book — SQL</span></a></li>
+      <li><a class="link" id="tinder-link" href="https://tinder.com/@fcabueno"><span class="link-number" aria-hidden="true">03</span><span>Tinder</span></a></li>
+      <li><a class="link" href="landing/"><span class="link-number" aria-hidden="true">04</span><span>E·Book — SQL</span></a></li>
     </ul>
   </main>
   <footer class="footer"><span>DATA TECH @ 2026</span><span class="location">São Paulo, BR <svg class="flag" viewBox="0 0 20 14" role="img" aria-label="Brasil"><rect x=".5" y=".5" width="19" height="13" rx="1" fill="#229447"/><path d="M10 2.5 16.5 7 10 11.5 3.5 7Z" fill="#f4d342"/><circle cx="10" cy="7" r="2" fill="#28539a"/></svg></span></footer>
 </div>
+<script>
+  document.getElementById('tinder-link').addEventListener('click', function (event) {
+    const mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    if (!mobile || event.defaultPrevented || event.button !== 0 ||
+        event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+    event.preventDefault();
+    const webUrl = this.href;
+    const fallback = window.setTimeout(function () {
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+      if (!document.hidden) window.location.assign(webUrl);
+    }, 1800);
+    function onVisibilityChange() {
+      if (document.hidden) {
+        window.clearTimeout(fallback);
+        document.removeEventListener('visibilitychange', onVisibilityChange);
+      }
+    }
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    window.location.assign('tinder://u/fcabueno');
+  });
+</script>
 </body>
 </html>

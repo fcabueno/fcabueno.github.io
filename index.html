@@ -25,7 +25,7 @@
   *, *::before, *::after { box-sizing: border-box; }
   html { min-height: 100%; }
   body { margin: 0; min-height: 100vh; background: #111; color: var(--ink); font-family: 'Roboto', sans-serif; -webkit-font-smoothing: antialiased; }
-  body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: -1; background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('s-background.jpg') center 42% / cover no-repeat; }
+  body::before { content: ''; position: fixed; inset: -10px; pointer-events: none; z-index: -1; filter: blur(5px); background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('s-background.png') center center / cover no-repeat; }
   .page { width: min(100% - 40px, 480px); min-height: 100svh; margin: auto; display: flex; flex-direction: column; }
   .footer { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #c0bfba; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
   .location { display: inline-flex; align-items: center; gap: 7px; }
@@ -35,7 +35,7 @@
   h1 { margin: 0; font-family: 'Roboto', sans-serif; font-size: clamp(1.65rem, 6vw, 2rem); line-height: 1.1; letter-spacing: -.035em; }
   .bio { margin: 10px 0 30px; color: #c8c7c1; font-size: 13px; letter-spacing: .04em; }
   .links { list-style: none; width: 85%; padding: 0; margin: 0; display: grid; gap: 24px; }
-  .link { position: relative; min-height: 65px; padding: 18px 38px; display: flex; align-items: center; justify-content: center; background: rgba(17,17,17,.75); border: 3px solid #fff; border-radius: 4px; box-shadow: 0 6px 0 rgba(255,255,255,.28); color: var(--ink); text-decoration: none; font-family: 'Roboto', sans-serif; font-size: 15px; font-weight: 600; transition: background .2s, color .2s, transform .2s, box-shadow .2s; }
+  .link { position: relative; min-height: 65px; padding: 18px 38px; display: flex; align-items: center; justify-content: center; background: rgba(38,38,42,.48); -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,.55); border-radius: 4px; box-shadow: 0 6px 0 rgba(255,255,255,.28); color: var(--ink); text-decoration: none; font-family: 'Roboto', sans-serif; font-size: 15px; font-weight: 600; transition: background .2s, color .2s, transform .2s, box-shadow .2s; }
   .link-number { position: absolute; top: 50%; transform: translateY(-50%); }
   .link-number { left: 16px; font: 700 10px 'Roboto', sans-serif; letter-spacing: .12em; opacity: .65; }
   .link:hover, .link:focus-visible { background: #efeee8; color: #151515; }
@@ -56,7 +56,7 @@
     <ul class="links" aria-label="Links de Felipe Bueno">
       <li><a class="link" href="https://www.linkedin.com/in/fcabueno/" target="_blank" rel="noopener noreferrer"><span class="link-number" aria-hidden="true">01</span><span>LinkedIn</span></a></li>
       <li><a class="link" href="https://www.instagram.com/fcabueno/" target="_blank" rel="noopener noreferrer"><span class="link-number" aria-hidden="true">02</span><span>Instagram</span></a></li>
-      <li><a class="link" href="landing/"><span class="link-number" aria-hidden="true">03</span><span>E-Book — SQL</span></a></li>
+      <li><a class="link" href="landing/"><span class="link-number" aria-hidden="true">03</span><span>E-Book · SQL</span></a></li>
     </ul>
   </main>
   <footer class="footer"><span>DATA TECH @ 2026</span><span class="location">São Paulo, BR <svg class="flag" viewBox="0 0 20 14" role="img" aria-label="Brasil"><rect x=".5" y=".5" width="19" height="13" rx="1" fill="#229447"/><path d="M10 2.5 16.5 7 10 11.5 3.5 7Z" fill="#f4d342"/><circle cx="10" cy="7" r="2" fill="#28539a"/></svg></span></footer>
